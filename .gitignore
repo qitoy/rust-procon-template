@@ -1,0 +1,10 @@
+*
+!*/
+
+!/.gitignore
+!/.gitmodules
+!/.cargo/config.toml
+!/rust-library
+!/atcoder/compete.toml
+
+

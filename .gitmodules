@@ -1,0 +1,3 @@
+[submodule "rust-library"]
+	path = rust-library
+	url = git@github.com:qitoy/rust-library.git
