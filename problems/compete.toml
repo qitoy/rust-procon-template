@@ -112,8 +112,9 @@ dev-dependencies = '''
 [template.new.copy-files]
 
 [new]
-kind = "cargo-compete"
 platform = "atcoder"
+kind = "oj-api"
+url = "https://kenkoooo.com/atcoder/#/contest/show/{{ id }}"
 path = "./{{ contest }}"
 
 [test]
