@@ -14,6 +14,32 @@ use ac_library::ModInt998244353 as Mint;
 use itertools::{iproduct, izip, Itertools as _};
 use num::integer::Integer as _;
 use proconio::{input, marker::*};
+
+#[macro_export]
+macro_rules! chmax {
+    ($a:expr, $b:expr) => {{
+        let tmp = $b;
+        if $a < tmp {
+            $a = tmp;
+            true
+        } else {
+            false
+        }
+    }};
+}
+
+#[macro_export]
+macro_rules! chmin {
+    ($a:expr, $b:expr) => {{
+        let tmp = $b;
+        if $a > tmp {
+            $a = tmp;
+            true
+        } else {
+            false
+        }
+    }};
+}
 '''
 
 [template.new]
