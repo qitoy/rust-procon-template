@@ -10,11 +10,12 @@
           todo!();
       }
 
-      use std::{cmp::Reverse, collections::*};
       use ac_library::ModInt998244353 as Mint;
       use itertools::{iproduct, izip, Itertools as _};
       use num::integer::Integer as _;
       use proconio::{input, marker::*};
+      use std::{cmp::Reverse, collections::*};
+      use superslice::Ext as _;
 
       #[macro_export]
       macro_rules! chmax {
