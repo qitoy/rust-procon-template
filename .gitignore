@@ -6,5 +6,7 @@
 !/.gitmodules
 !/.cargo/config.toml
 !/rust-library
-!/atcoder/compete.toml
-!/problems/compete.toml
+
+!/flake.nix
+!/flake.lock
+!/atcoder.nix
