@@ -5,8 +5,10 @@
 !/.gitignore
 !/.gitmodules
 !/.cargo/config.toml
-!/rust-library
+!/qitoylib-rs
 
 !/flake.nix
 !/flake.lock
 !/atcoder.nix
+
+!/yukicoder/compete.toml

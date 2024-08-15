@@ -1,0 +1,89 @@
+test-suite = "{{ manifest_dir }}/testcases/{{ bin_alias }}.yml"
+open = '["nvim", "-p"] + (.paths | map(.src))'
+
+[template]
+src = '''
+#![allow(unused_imports)]
+
+fn main() {
+    todo!();
+}
+
+use proconio::{input, marker::*};
+use std::{cmp::Reverse, collections::*};
+
+#[macro_export]
+macro_rules! chmax {
+    ($a:expr, $b:expr) => {{
+        let tmp = $b;
+        if $a < tmp {
+            $a = tmp;
+            true
+        } else {
+            false
+        }
+    }};
+}
+
+#[macro_export]
+macro_rules! chmin {
+    ($a:expr, $b:expr) => {{
+        let tmp = $b;
+        if $a > tmp {
+            $a = tmp;
+            true
+        } else {
+            false
+        }
+    }};
+}
+
+#[macro_export]
+/// mvec![]
+macro_rules! mvec {
+    ($val:expr; ()) => {
+        $val
+    };
+    ($val:expr; ($size:expr $(,$rest:expr)*)) => {
+        vec![mvec![$val; ($($rest),*)]; $size]
+    };
+}
+'''
+
+[template.new]
+edition = "2021"
+dependencies = '''
+proconio = { version = "=0.4.5", features = ["derive"] }
+'''
+
+[new]
+kind = "cargo-compete"
+platform = "yukicoder"
+path = "./{{ contest | default: 'problems' }}"
+
+[test]
+toolchain = "1.70.0"
+
+[add]
+url = '{% case args[0] %}{% when "contest" %}https://yukicoder.me/contests/{{ args[1] }}{% when "problem" %}https://yukicoder.me/problems/no/{{ args[1] }}{% endcase %}'
+is-contest = ["bash", "-c", '[[ $(cut -d / -f 4) == "contests" ]]']
+bin-name = '{% assign segments = url | split: "/" %}{{ segments[5] }}'
+
+[submit]
+kind = "command"
+args = [
+  "cargo",
+  "+1.70.0",
+  "equip",
+  "--exclude",
+  "proconio",
+  "--remove",
+  "docs",
+  "--minify",
+  "libs",
+  "--mine",
+  "github.com/qitoy",
+  "--bin",
+  "{{ bin_name }}",
+]
+language_id = "rust"
