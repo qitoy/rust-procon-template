@@ -4,7 +4,8 @@
 !/README.md
 !/.gitignore
 !/.gitmodules
+!/qitoylib-rs
 !/.cargo/config.toml
-!/rust-library
+
 !/atcoder/compete.toml
 !/problems/compete.toml

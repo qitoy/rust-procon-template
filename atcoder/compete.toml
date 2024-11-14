@@ -110,27 +110,27 @@ text_io = "=0.1.12"
 rustc-hash = "=1.1.0"
 smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
 
-qitoy-derive = { git = "https://github.com/qitoy/rust-library" }
-qitoy-dfa = { git = "https://github.com/qitoy/rust-library" }
-qitoy-dfa-leq = { git = "https://github.com/qitoy/rust-library" }
-qitoy-dfa-leq_inv = { git = "https://github.com/qitoy/rust-library" }
-qitoy-dfa-multiple_of = { git = "https://github.com/qitoy/rust-library" }
-qitoy-dfa-non_zero = { git = "https://github.com/qitoy/rust-library" }
-qitoy-nfa = { git = "https://github.com/qitoy/rust-library" }
-qitoy-group = { git = "https://github.com/qitoy/rust-library" }
-qitoy-math-combi = { git = "https://github.com/qitoy/rust-library" }
-qitoy-mo = { git = "https://github.com/qitoy/rust-library" }
-qitoy-prelude = { git = "https://github.com/qitoy/rust-library" }
-qitoy-prime-check = { git = "https://github.com/qitoy/rust-library" }
-qitoy-prime-factorize = { git = "https://github.com/qitoy/rust-library" }
-qitoy-prime-sieve = { git = "https://github.com/qitoy/rust-library" }
-qitoy-rerooting_dp = { git = "https://github.com/qitoy/rust-library" }
-qitoy-rolling_hash = { git = "https://github.com/qitoy/rust-library" }
-qitoy-utils-float2uint = { git = "https://github.com/qitoy/rust-library" }
-qitoy-weighted_dsu = { git = "https://github.com/qitoy/rust-library" }
-qitoy-red_black_tree = { git = "https://github.com/qitoy/rust-library" }
-qitoy-ring = { git = "https://github.com/qitoy/rust-library" }
-qitoy-math-matrix = { git = "https://github.com/qitoy/rust-library" }
+qitoy-derive = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-leq = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-leq_inv = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-multiple_of = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-non_zero = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-nfa = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-group = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-math-combi = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-mo = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-prelude = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-prime-check = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-prime-factorize = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-prime-sieve = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-rerooting_dp = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-rolling_hash = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-utils-float2uint = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-potentialized_unionfind = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-red_black_tree = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-ring = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-math-matrix = { git = "https://github.com/qitoy/qitoylib-rs" }
 '''
 dev-dependencies = '''
 '''
