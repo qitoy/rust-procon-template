@@ -3,8 +3,6 @@
 
 !/README.md
 !/.gitignore
-!/.gitmodules
-!/qitoylib-rs
 !/.cargo/config.toml
 
 !/atcoder/compete.toml

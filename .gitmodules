@@ -1,3 +1,0 @@
-[submodule "qitoylib-rs"]
-	path = qitoylib-rs
-	url = git@github.com:qitoy/qitoylib-rs.git
