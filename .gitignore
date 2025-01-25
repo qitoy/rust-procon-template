@@ -6,5 +6,6 @@
 !/.cargo/config.toml
 
 !/atcoder/compete.toml
+!/atcoder/init
 !/problems/compete.toml
 !/yukicoder/compete.toml
