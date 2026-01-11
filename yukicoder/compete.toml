@@ -10,6 +10,7 @@ fn main() {
 }
 
 use proconio::{input, marker::*};
+use itertools::{iproduct, izip, Itertools as _};
 use std::{cmp::Reverse, collections::*};
 
 #[macro_export]
@@ -53,7 +54,32 @@ macro_rules! mvec {
 [template.new]
 edition = "2021"
 dependencies = '''
-proconio = { version = "=0.4.5", features = ["derive"] }
+proconio = { version = "=0.5.0", features = ["derive"] }
+num = "=0.4.3"
+itertools = "=0.14.0"
+
+qitoy-berlekamp_massey = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-bostan_mori = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-derive = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-leq = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-leq_inv = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-multiple_of = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-dfa-non_zero = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-group = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-math-combi = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-math-matrix = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-mo = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-nfa = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-potentialized_unionfind = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-prime-check = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-prime-factorize = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-prime-sieve = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-red_black_tree = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-rerooting_dp = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-ring = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-rolling_hash = { git = "https://github.com/qitoy/qitoylib-rs" }
+qitoy-utils-float2uint = { git = "https://github.com/qitoy/qitoylib-rs" }
 '''
 
 [new]
@@ -67,22 +93,9 @@ is-contest = ["bash", "-c", '[[ $(cut -d / -f 4) == "contests" ]]']
 bin-name = '{% assign segments = url | split: "/" %}{{ segments[5] }}'
 
 [test]
-toolchain = "1.70.0"
+# toolchain = "1.89.0"
 
 [submit]
-kind = "command"
-args = [
-  "cargo",
-  "equip",
-  "--exclude",
-  "proconio",
-  "--remove",
-  "docs",
-  "--minify",
-  "libs",
-  "--mine",
-  "github.com/qitoy",
-  "--bin",
-  "{{ bin_name }}",
-]
+kind = "file"
+path = "{{ src_path }}"
 language_id = "rust"

@@ -47,12 +47,18 @@
                 channel = "1.89.0";
                 sha256 = "sha256-+9FmLhAOezBZCOziO0Qct1NOrfpjNsXxc/8I0c7BdKE=";
               };
+              yukicoder = {
+                channel = "1.89.0";
+                sha256 = "sha256-+9FmLhAOezBZCOziO0Qct1NOrfpjNsXxc/8I0c7BdKE=";
+                # channel = "1.93.0";
+                # sha256 = "sha256-vra6TkHITpwRyA5oBKAHSX0Mi6CBDNQD+ryPSpxFsfg=";
+              };
             in
             import ./devShells.nix {
               inherit (pkgs) mkShell;
               inherit (inputs') fenix;
               toolchains = {
-                inherit default atcoder;
+                inherit default atcoder yukicoder;
               };
             };
           treefmt = {
