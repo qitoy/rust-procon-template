@@ -4,8 +4,12 @@
 !/README.md
 !/.gitignore
 !/.cargo/config.toml
+!/flake.nix
+!/flake.lock
+!/devShells.nix
 
 !/atcoder/compete.toml
 !/atcoder/init
+
 !/problems/compete.toml
 !/yukicoder/compete.toml

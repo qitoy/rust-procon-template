@@ -163,7 +163,7 @@ platform = "atcoder"
 path = "./{{ contest }}"
 
 [test]
-toolchain = "1.89.0"
+# toolchain = "1.89.0" # use nix develop
 
 [submit]
 kind = "file"
